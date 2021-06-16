@@ -1,5 +1,6 @@
 // ChatbotJS Example AI
 let exec = require("child_process").spawnSync;
+let fs = require("fs");
 
 let data = {
 	"hello world": "Hi Human!",
