@@ -77,7 +77,7 @@ let data = {
 			say("Updating.... Please wait....");
 			require("https").get("https://yonle.github.io/demoai/ai.js", stream => {
 				say("Connected. Start updating....");
-				stream.pipe(fs.createReadStream(__dirname + "/ai.js"));
+				stream.pipe(fs.createWriteStream(__dirname + "/ai.js"));
 				stream.on('end', () => {
 					say("I'm done. Now restart chatbotjs", true);
 				});
